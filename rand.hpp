@@ -25,7 +25,7 @@ class Rand : public Base {
 		return nullptr;
 	}
 	Iterator* create_iterator() {
-		Iterator* iter = NullIterator(this);
+		Iterator* iter = new NullIterator(this);
 		return iter;
 	}
 

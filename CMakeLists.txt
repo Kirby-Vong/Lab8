@@ -10,6 +10,8 @@ ADD_EXECUTABLE(test
    BubbleSort.cpp
    VectorContainer.cpp
    SelectionSort.cpp
+   binary_iterator.cpp
+   preorder_iterator.cpp	
    )
 
 

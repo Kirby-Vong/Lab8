@@ -8,6 +8,7 @@
 #include "div.hpp"
 #include "pow.hpp"
 #include "rand.hpp"
+#include "iterator.hpp"
 #include "list_container_test.hpp"
 #include "VectorContainer_test.hpp"
 

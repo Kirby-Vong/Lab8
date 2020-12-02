@@ -48,8 +48,8 @@ TEST(ListContainerTest, AddingNumberTest) {
     Op* neg_three = new Op(-3);
     Op* neg_four = new Op(-4);
     Op* five = new Op(5);
-    add* a1 = new add(neg_three, neg_four);
-    add* a2 = new add(neg_three, five);
+    Add* a1 = new Add(neg_three, neg_four);
+    Add* a2 = new Add(neg_three, five);
 
     
 
@@ -102,8 +102,8 @@ TEST(BubbleSortTest, AddingBubbleSortTest) {
      Op* neg_three = new Op(-3);
      Op* neg_four = new Op(-4);
      Op* five = new Op(5);
-     add* a1 = new add(neg_three, neg_four);
-     add* a2 = new add(neg_three, five);
+     Add* a1 = new Add(neg_three, neg_four);
+     Add* a2 = new Add(neg_three, five);
      
      ListContainer* test = new ListContainer();
      test->add_element(neg_three);
@@ -168,8 +168,8 @@ TEST(BubbleSortTest, BubbleNegTest) {
 TEST(BubbleSortTest, BubbleTest) {
     Op* zero = new Op(-36);
     Op* three = new Op(26);
-    add* a1 = new add(zero, three);
-    add* a2 = new add(a1,three);
+    Add* a1 = new Add(zero, three);
+    Add* a2 = new Add(a1,three);
     
     ListContainer* list = new ListContainer();
     list->add_element(zero); 

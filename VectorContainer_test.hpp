@@ -104,11 +104,11 @@ TEST(SortTestSet, SortTest) {
 TEST(SortTestSet, SelectionSortTest) {
     Op* seven = new Op(7);
 	Op* four = new Op(4);
-	mult* TreeA = new mult(seven, four);
+	Mult* TreeA = new Mult(seven, four);
 
 	Op* three = new Op(3);
 	Op* two = new Op(2);
-	add* TreeB = new add(three, two);
+	Add* TreeB = new Add(three, two);
 
 	Op* ten = new Op(10);
 	Op* six = new Op(6);
