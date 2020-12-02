@@ -11,6 +11,9 @@
 #include "iterator.hpp"
 #include "list_container_test.hpp"
 #include "VectorContainer_test.hpp"
+#include "iterator_test.hpp"
+#include "visitor.hpp"
+#include "visitor_test.hpp"
 
 int main(int argc, char **argv) {
   ::testing::InitGoogleTest(&argc, argv);

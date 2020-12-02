@@ -4,6 +4,7 @@
 #include "base.hpp"
 #include <string>
 #include "iterator.hpp"
+#include "visitor.hpp"
 
 using namespace std;
 
@@ -27,6 +28,9 @@ class Div : public Base {
 		Iterator* iter = new BinaryIterator(this);
 		return iter;
 	}
+    void accept(CountVisitor* vi) {
+        vi->visit_div();
+    }
     virtual double evaluate() {
         if(rightChild->evaluate() == 0) return -1;
         return leftChild->evaluate() /  rightChild->evaluate();

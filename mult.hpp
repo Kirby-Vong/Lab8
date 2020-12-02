@@ -6,6 +6,7 @@
 #include <string>
 
 #include "iterator.hpp"
+#include "visitor.hpp"
 
 using namespace std;
 
@@ -36,6 +37,9 @@ class Mult : public Base {
 			str = left->stringify() + " * " + right->stringify();
 			return str;
 		}
+        void accept(CountVisitor* vi) {
+            vi->visit_mult();
+        }
 };
 
 #endif

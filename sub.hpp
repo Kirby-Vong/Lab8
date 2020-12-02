@@ -4,7 +4,7 @@
 #include "base.hpp"
 
 #include "iterator.hpp"
-
+#include "visitor.hpp"
 
 
 class Sub : public Base {
@@ -28,7 +28,9 @@ class Sub : public Base {
 			Iterator* iter = new BinaryIterator(this);
 			return iter;
 		}
-
+        void accept(CountVisitor* vi) {
+            vi->visit_sub();
+        }
 
         virtual double evaluate() {
             return leftChild->evaluate() - rightChild->evaluate();

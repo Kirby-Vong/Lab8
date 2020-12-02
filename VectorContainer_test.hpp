@@ -8,6 +8,8 @@
 #include "mult.hpp"
 #include "add.hpp"
 #include "sub.hpp"
+#include "visitor.hpp"
+#include "iterator.hpp"
 
 TEST(VectorContainerTest, VectorTest) {
 	Op* seven = new Op(7);

@@ -4,7 +4,7 @@
 #include "base.hpp"
 
 #include "iterator.hpp"
-
+#include "visitor.hpp"
 #include <string>
 
 class Op : public Base {
@@ -24,7 +24,9 @@ class Op : public Base {
 			Iterator* iter = new NullIterator(this);
 			return iter;
 		}
-
+        void accept(CountVisitor* vi) {
+            vi->visit_op();
+        }
 
         virtual double evaluate() { return v; }
         virtual std::string stringify() { return std::to_string(v); }

@@ -5,7 +5,7 @@
 #include <cmath>
 
 #include "iterator.hpp"
-
+#include "visitor.hpp"
 
 
 class Pow : public Base {
@@ -31,7 +31,9 @@ class Pow : public Base {
 			return iter;
 		}
 
-
+        void accept(CountVisitor* vi) {
+            vi->visit_pow();
+        }
         virtual double evaluate() {
             if(rightChild->evaluate() == 0) {
                 return 1;

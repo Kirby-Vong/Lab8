@@ -5,7 +5,7 @@
 #include "base.hpp"
 
 #include "iterator.hpp"
-
+#include "visitor.hpp"
 
 #include <stdlib.h> //srand, rand
 //This class is exactly the same as the Op class, but rather than being able to set its value, its value is set during
@@ -28,7 +28,9 @@ class Rand : public Base {
 		Iterator* iter = new NullIterator(this);
 		return iter;
 	}
-
+    void accept(CountVisitor* vi) {
+        vi->visit_rand();
+    }
 
     virtual double evaluate() { return v; }
     virtual std::string stringify() { return std::to_string(v); }
