@@ -30,7 +30,7 @@ class Add : public Base {
 			str = leftChild->stringify() + " + " + rightChild->stringify();
 			return str;
 		}
-		
+
 };
 
 #endif

@@ -2,7 +2,10 @@
 #define __SUB_HPP__
 
 #include "base.hpp"
+
 #include "iterator.hpp"
+
+
 
 class Sub : public Base {
     public:
@@ -14,6 +17,7 @@ class Sub : public Base {
             leftChild = left;
             rightChild = right;
         }
+
 		Base* get_left() {
 			return leftChild;
 		}
@@ -24,6 +28,8 @@ class Sub : public Base {
 			Iterator* iter = new BinaryIterator(this);
 			return iter;
 		}
+
+
         virtual double evaluate() {
             return leftChild->evaluate() - rightChild->evaluate();
         }

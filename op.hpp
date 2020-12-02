@@ -2,7 +2,9 @@
 #define __OP_HPP__
 
 #include "base.hpp"
+
 #include "iterator.hpp"
+
 #include <string>
 
 class Op : public Base {
@@ -11,6 +13,7 @@ class Op : public Base {
         Op(double value) : Base() {
             v = value;
         }
+
 		Base* get_left() {
 			return nullptr;
 		}
@@ -21,6 +24,8 @@ class Op : public Base {
 			Iterator* iter = new NullIterator(this);
 			return iter;
 		}
+
+
         virtual double evaluate() { return v; }
         virtual std::string stringify() { return std::to_string(v); }
 };

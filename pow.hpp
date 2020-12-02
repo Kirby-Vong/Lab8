@@ -3,7 +3,10 @@
 
 #include "base.hpp"
 #include <cmath>
+
 #include "iterator.hpp"
+
+
 
 class Pow : public Base {
     public:
@@ -16,6 +19,7 @@ class Pow : public Base {
             leftChild = left;
             rightChild = right;
         }
+
 		Base* get_left() {
 			return leftChild;
 		}
@@ -26,6 +30,7 @@ class Pow : public Base {
 			Iterator* iter = new BinaryIterator(this);
 			return iter;
 		}
+
 
         virtual double evaluate() {
             if(rightChild->evaluate() == 0) {
